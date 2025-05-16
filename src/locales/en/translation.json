@@ -1,0 +1,12 @@
+{
+    "welcome": "Learn Korean with KoLearn",
+    "nav": {
+        "home": "Home",
+        "lesson_list": "Lesson List"
+    },
+    "footer": {
+        "title": "Korean Learning Program",
+        "description": "This website helps you review Korean language materials commonly used in Vietnam. It includes vocabulary, grammar, exercises, and specific examples for each lesson.",
+        "copyright": "Learn Korean Online — Contact: duongnv10504@gmail.com"
+    }
+}
