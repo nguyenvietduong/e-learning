@@ -1,0 +1,18 @@
+{
+    "title": "Về KoLearn",
+    "sections": {
+        "intro": "KoLearn ra đời với sứ mệnh đồng hành cùng bạn trên hành trình chinh phục tiếng Hàn một cách dễ dàng và hiệu quả nhất. Chúng tôi tin rằng việc học ngoại ngữ không chỉ là tiếp thu kiến thức mà còn là trải nghiệm thú vị, giúp mở rộng cánh cửa văn hóa và cơ hội mới.",
+        "visionTitle": "Tầm nhìn của chúng tôi",
+        "visionDesc": "Trở thành nền tảng học tiếng Hàn hàng đầu Việt Nam, cung cấp tài liệu chất lượng, phương pháp học hiện đại, và môi trường học thân thiện, giúp mọi người từ người mới bắt đầu đến nâng cao đều có thể tự tin giao tiếp và phát triển kỹ năng.",
+        "methodTitle": "Phương pháp học tại KoLearn",
+        "methodList": [
+            "Thực hành qua ví dụ thực tế: Các bài học đi kèm minh họa cụ thể giúp bạn dễ dàng áp dụng ngay.",
+            "Học từ vựng và ngữ pháp theo chủ đề: Hệ thống bài học khoa học, từng bước xây dựng nền tảng vững chắc.",
+            "Tương tác và phản hồi nhanh: Chúng tôi luôn lắng nghe và hỗ trợ bạn qua các kênh liên hệ."
+        ],
+        "teamTitle": "Đội ngũ phát triển",
+        "teamDesc": "KoLearn được xây dựng bởi những người đam mê tiếng Hàn và giáo dục, luôn không ngừng cải tiến để mang đến trải nghiệm học tập tốt nhất.",
+        "contactTitle": "Liên hệ với chúng tôi",
+        "contactDesc": "Nếu bạn có câu hỏi hay góp ý, đừng ngần ngại liên hệ qua số điện thoại 0385906406 hoặc gửi mail về địa chỉ duongnv10504@gmail.com để chúng tôi có thể hỗ trợ bạn nhanh nhất."
+    }
+}

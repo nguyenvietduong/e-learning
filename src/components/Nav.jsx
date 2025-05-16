@@ -5,32 +5,34 @@ import { useTranslation } from 'react-i18next';
 
 export default function Nav() {
     const location = useLocation();
-    const isActive = (path) => location.pathname === path;
-    const { t, i18n } = useTranslation();
+    const isActive = (path) => {
+        return location.pathname === path || location.pathname.startsWith(path + "/");
+    };
+
+    const { t } = useTranslation();
 
     return (
         <nav className="p-4">
             <div className="container mx-auto flex items-center justify-between gap-6">
                 {/* Link navigation */}
                 <div className="flex space-x-6 text-lg font-medium">
-                    <Link
-                        to="/"
-                        className={isActive("/") ? "underline font-bold text-blue-600" : "hover:underline hover:text-blue-500"}
-                    >
-                        {t('nav.home')}
-                    </Link>
-                    <Link
-                        to="/chuong-trinh"
-                        className={isActive("/chuong-trinh") ? "underline font-bold text-blue-600" : "hover:underline hover:text-blue-500"}
-                    >
-                        Chương trình học
-                    </Link>
-                    <Link
-                        to="/lien-he"
-                        className={isActive("/lien-he") ? "underline font-bold text-blue-600" : "hover:underline hover:text-blue-500"}
-                    >
-                        Liên hệ
-                    </Link>
+                    {[
+                        { to: "/", label: t("nav.home") },
+                        { to: "/lessons", label: t("nav.lesson") },
+                        { to: "/about", label: t("nav.about") },
+                        { to: "/contact", label: t("nav.contact") },
+                    ].map(({ to, label }) => (
+                        <Link
+                            key={to}
+                            to={to}
+                            className={`transition-transform duration-300 ${isActive(to)
+                                ? "underline font-bold text-blue-600 animate-bounce-slow"
+                                : "hover:underline hover:text-blue-500"
+                                }`}
+                        >
+                            {label}
+                        </Link>
+                    ))}
                 </div>
 
                 {/* Search bar */}
@@ -38,6 +40,16 @@ export default function Nav() {
 
                 {/* Language switcher */}
                 <LanguageSwitcher />
+
+                {/* Auththencation */}
+                <div className="flex space-x-4">
+                    <Link
+                        to="/login"
+                        className={isActive("/login") ? "underline font-bold text-blue-600" : "hover:underline hover:text-blue-500"}
+                    >
+                        {t('nav.login')}
+                    </Link>
+                </div>
             </div>
         </nav>
     );

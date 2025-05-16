@@ -1,12 +1,125 @@
 {
-    "welcome": "Học Tiếng Hàn KoLearn",
+    "welcome": "KoLearn",
     "nav": {
-        "home": "Trang chủ",
-        "lesson_list": "Danh sách bài học"
+        "home": "Trang Chủ",
+        "lesson": "Bài Học",
+        "about": "Giới Thiệu",
+        "contact": "Liên Hệ",
+        "login": "Đăng Nhập",
+        "register": "Đăng Ký",
+        "logout": "Đăng Xuất",
+        "profile": "Hồ Sơ",
+        "error": {
+            "404": {
+                "title": "404 Không Tìm Thấy Trang",
+                "desc": "Xin lỗi, trang bạn tìm không tồn tại hoặc đã bị xóa."
+            },
+            "speech": {
+                "notSupported": "Trình duyệt của bạn không hỗ trợ chức năng chuyển văn bản thành giọng nói.",
+                "playError": "Không thể phát âm thanh. Vui lòng thử lại.",
+                "permissionDenied": "Trình duyệt chưa được cấp quyền sử dụng chức năng chuyển văn bản thành giọng nói. Vui lòng kiểm tra cài đặt."
+            }
+        }
+    },
+    "pages": {
+        "home": {
+            "title": "Chào mừng đến với KoLearn - Hành Trình Học Tiếng Hàn Bắt Đầu Tại Đây!",
+            "intro": "Khám phá văn hóa, ngôn ngữ Hàn Quốc và nhiều hơn thế qua các bài học và tài nguyên toàn diện của chúng tôi.",
+            "koreaIntro": {
+                "title": "Khám Phá Hàn Quốc",
+                "desc": "Hàn Quốc là một quốc gia sôi động với lịch sử phong phú, công nghệ hiện đại và cảnh quan tuyệt đẹp. Hãy đắm chìm trong văn hóa và ngôn ngữ độc đáo của đất nước này."
+            },
+            "features": {
+                "alphabet": {
+                    "title": "Học Bảng Chữ Cái Hangul",
+                    "desc": "Thành thạo hệ thống chữ viết tiếng Hàn qua các bài học đơn giản và tương tác."
+                },
+                "vocab": {
+                    "title": "Mở Rộng Từ Vựng",
+                    "desc": "Tăng cường vốn từ tiếng Hàn với luyện tập hàng ngày và các cụm từ hữu ích."
+                },
+                "grammar": {
+                    "title": "Hiểu Ngữ Pháp",
+                    "desc": "Nhận giải thích rõ ràng về các quy tắc ngữ pháp tiếng Hàn và cấu trúc câu."
+                }
+            },
+            "culture": {
+                "title": "Văn Hóa & Du Lịch Hàn Quốc",
+                "hanbok": {
+                    "title": "Hanbok",
+                    "desc": "Trang phục truyền thống Hàn Quốc được mặc trong các dịp lễ hội và sự kiện đặc biệt."
+                },
+                "food": {
+                    "title": "Ẩm Thực Hàn Quốc",
+                    "desc": "Trải nghiệm hương vị Hàn Quốc qua các món ăn như kimchi, bibimbap và nhiều hơn nữa."
+                },
+                "city": {
+                    "title": "Thành Phố Seoul",
+                    "desc": "Khám phá thủ đô nhộn nhịp với kiến trúc hiện đại và các di tích lịch sử."
+                }
+            },
+            "learnKorean": {
+                "title": "Tại Sao Nên Học Tiếng Hàn?",
+                "desc": "Học tiếng Hàn mở ra cánh cửa đến văn hóa, kinh doanh và du lịch. Đây là lý do vì sao bạn nên đầu tư thời gian.",
+                "list": [
+                    {
+                        "title": "Phổ Biến Toàn Cầu",
+                        "desc": "Văn hóa pop Hàn Quốc được yêu thích trên toàn thế giới, khiến việc học tiếng Hàn vừa hữu ích vừa thú vị."
+                    },
+                    {
+                        "title": "Cơ Hội Nghề Nghiệp",
+                        "desc": "Kiến thức tiếng Hàn có thể giúp bạn nâng cao cơ hội việc làm trong nhiều ngành nghề khác nhau."
+                    },
+                    {
+                        "title": "Hiểu Biết Văn Hóa",
+                        "desc": "Đạt được cái nhìn sâu sắc hơn về truyền thống, lịch sử và cuộc sống hàng ngày của người Hàn."
+                    }
+                ]
+            },
+            "slider": {
+                "slides": [
+                    {
+                        "caption": "Khám phá tiếng Hàn dễ dàng hơn mỗi ngày!"
+                    },
+                    {
+                        "caption": "Học từ vựng và ngữ pháp hiệu quả"
+                    },
+                    {
+                        "caption": "Luyện tập với các ví dụ thực tế"
+                    }
+                ],
+                "description": "Luyện tập từ vựng, ngữ pháp và giao tiếp tiếng Hàn cùng KoLearn từ cơ bản.",
+                "lessonsButton": "📚 Danh Sách Bài Học",
+                "contactButton": "📩 Liên Hệ Chúng Tôi"
+            },
+            "cta": "🚀 Bắt Đầu Học Ngay"
+        },
+        "login": {
+            "title": "KoLearn",
+            "subtitle": "Học tiếng Hàn dễ dàng - Mở rộng thế giới mới",
+            "form": {
+                "emailLabel": "Email",
+                "emailPlaceholder": "email.của.bạn@example.com",
+                "passwordLabel": "Mật Khẩu",
+                "passwordPlaceholder": "********",
+                "submitButton": "Đăng Nhập"
+            },
+            "footer": {
+                "noAccount": "Bạn chưa có tài khoản?",
+                "registerLink": "Đăng ký ngay"
+            }
+        },
+        "error": {
+            "404": {
+                "title": "Có vẻ bạn đang lạc ở Seoul!",
+                "desc": "Hãy quay lại và tiếp tục học tiếng Hàn cùng KoLearn. 🇰🇷",
+                "back": "🏠 Quay về Trang Chủ"
+            }
+        }
     },
     "footer": {
-        "title": "Chương trình học tiếng Hàn",
-        "description": "Website giúp ôn tập theo giáo trình học tiếng Hàn phổ biến tại Việt Nam. Bao gồm từ vựng, ngữ pháp, luyện tập và ví dụ cụ thể cho từng bài.",
+        "title": "Chương Trình Học Tiếng Hàn",
+        "description": "Trang web giúp bạn ôn tập dựa trên các sách tiếng Hàn phổ biến tại Việt Nam. Bao gồm từ vựng, ngữ pháp, bài tập thực hành và ví dụ chi tiết cho mỗi bài học.",
         "copyright": "Học Tiếng Hàn Online — Liên hệ: duongnv10504@gmail.com"
     }
 }

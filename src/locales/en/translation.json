@@ -1,12 +1,125 @@
 {
-    "welcome": "Learn Korean with KoLearn",
+    "welcome": "KoLearn",
     "nav": {
         "home": "Home",
-        "lesson_list": "Lesson List"
+        "lesson": "Lessons",
+        "about": "About",
+        "contact": "Contact",
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout",
+        "profile": "Profile",
+        "error": {
+            "404": {
+                "title": "404 Page Not Found",
+                "desc": "Sorry, the page you're looking for doesn't exist or has been removed."
+            },
+            "speech": {
+                "notSupported": "Your browser does not support text-to-speech functionality.",
+                "playError": "Unable to play the sound. Please try again.",
+                "permissionDenied": "The browser has not been granted permission to use text-to-speech. Please check your settings."
+            }
+        }
+    },
+    "pages": {
+        "home": {
+            "title": "Welcome to KoLearn - Your Korean Journey Starts Here!",
+            "intro": "Explore Korean culture, language, and more through our comprehensive lessons and resources.",
+            "koreaIntro": {
+                "title": "Discover Korea",
+                "desc": "Korea is a vibrant country rich in history, technology, and beautiful landscapes. Dive into its unique culture and language."
+            },
+            "features": {
+                "alphabet": {
+                    "title": "Learn Hangul Alphabet",
+                    "desc": "Master the Korean writing system with simple and interactive lessons."
+                },
+                "vocab": {
+                    "title": "Build Your Vocabulary",
+                    "desc": "Expand your Korean vocabulary with daily practice and useful phrases."
+                },
+                "grammar": {
+                    "title": "Understand Grammar",
+                    "desc": "Get clear explanations on Korean grammar rules and sentence structure."
+                }
+            },
+            "culture": {
+                "title": "Korean Culture & Travel",
+                "hanbok": {
+                    "title": "Hanbok",
+                    "desc": "Traditional Korean clothing worn during festivals and celebrations."
+                },
+                "food": {
+                    "title": "Korean Food",
+                    "desc": "Experience the taste of Korea through dishes like kimchi, bibimbap, and more."
+                },
+                "city": {
+                    "title": "Seoul City",
+                    "desc": "Explore the bustling capital city full of modern architecture and historic sites."
+                }
+            },
+            "learnKorean": {
+                "title": "Why Learn Korean?",
+                "desc": "Learning Korean opens doors to culture, business, and travel. Here’s why it’s worth your time.",
+                "list": [
+                    {
+                        "title": "Global Popularity",
+                        "desc": "Korean pop culture is popular worldwide, making the language useful and fun."
+                    },
+                    {
+                        "title": "Career Opportunities",
+                        "desc": "Knowledge of Korean can enhance your job prospects in various industries."
+                    },
+                    {
+                        "title": "Cultural Understanding",
+                        "desc": "Gain deeper insight into Korean traditions, history, and daily life."
+                    }
+                ]
+            },
+            "slider": {
+                "slides": [
+                    {
+                        "caption": "Discover Korean more easily every day!"
+                    },
+                    {
+                        "caption": "Learn vocabulary and grammar effectively"
+                    },
+                    {
+                        "caption": "Practice with real-life examples"
+                    }
+                ],
+                "description": "Practice vocabulary, grammar, and Korean communication with KoLearn from scratch.",
+                "lessonsButton": "📚 Lesson List",
+                "contactButton": "📩 Contact Us"
+            },
+            "cta": "🚀 Start Learning Now"
+        },
+        "login": {
+            "title": "KoLearn",
+            "subtitle": "Learn Korean easily - Open up a new world",
+            "form": {
+                "emailLabel": "Email",
+                "emailPlaceholder": "your.email@example.com",
+                "passwordLabel": "Password",
+                "passwordPlaceholder": "********",
+                "submitButton": "Login"
+            },
+            "footer": {
+                "noAccount": "Don't have an account?",
+                "registerLink": "Register now"
+            }
+        },
+        "error": {
+            "404": {
+                "title": "Looks like you're lost in Seoul!",
+                "desc": "Let’s head back and continue learning Korean with KoLearn. 🇰🇷",
+                "back": "🏠 Back to Home"
+            }
+        }
     },
     "footer": {
         "title": "Korean Learning Program",
-        "description": "This website helps you review Korean language materials commonly used in Vietnam. It includes vocabulary, grammar, exercises, and specific examples for each lesson.",
+        "description": "A website to help you review based on popular Korean language textbooks in Vietnam. Includes vocabulary, grammar, practice exercises, and detailed examples for each lesson.",
         "copyright": "Learn Korean Online — Contact: duongnv10504@gmail.com"
     }
 }

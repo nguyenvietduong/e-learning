@@ -34,7 +34,10 @@ export default function LanguageSwitcher() {
                 className="focus:outline-none text-2xl"
                 aria-label="Change language"
             >
-                <span className={`fi ${currentLang.flagClass}`}></span>
+                <span
+                    className={`fi ${currentLang.flagClass}`}
+                ></span>
+
             </button>
 
             {open && (

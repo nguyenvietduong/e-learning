@@ -1,0 +1,26 @@
+{
+    "title": "📩 Contact KoLearn",
+    "intro": "If you have any questions or feedback, don't hesitate to reach out to us through the channels below. We will respond within 24 business hours.",
+    "info": {
+        "title": "📞 Contact Information",
+        "email": "Email",
+        "phone": "Phone Number",
+        "address": "Address",
+        "hours": "Working Hours"
+    },
+    "social": {
+        "title": "🌐 Follow Us",
+        "desc": "You can connect with KoLearn through the following platforms:",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "twitter": "Twitter"
+    },
+    "form": {
+        "title": "Send Us a Message",
+        "name": "Your Name",
+        "email": "Your Email",
+        "message": "Message",
+        "submit": "Send",
+        "thankYou": "Thank you for reaching out. We will get back to you soon."
+    }
+}

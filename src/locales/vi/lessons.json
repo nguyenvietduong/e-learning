@@ -1,0 +1,27 @@
+{
+    "title": "Danh sách bài học",
+    "lesson": {
+        "koreanHistory": {
+            "title": "Lịch sử Hàn Quốc",
+            "content": "Tìm hiểu về lịch sử phong phú và các giai đoạn phát triển của Hàn Quốc."
+        },
+        "hangul": {
+            "title": "Bảng chữ cái Hangul",
+            "content": "Nội dung bài học Hangul..."
+        },
+        "greetings": {
+            "title": "Chào hỏi cơ bản",
+            "content": "Xin chào, tạm biệt, cảm ơn..."
+        },
+        "numbers": {
+            "title": "Số đếm tiếng Hàn",
+            "content": "Một, hai, ba là il, i, sam..."
+        }
+    },
+    "tabs": {
+        "simpleVowels": "🟢 Nguyên âm đơn",
+        "complexVowels": "🟣 Nguyên âm kép",
+        "basicConsonants": "🔤 Phụ âm cơ bản",
+        "doubleConsonants": "🅿️ Phụ âm đôi"
+    }
+}
