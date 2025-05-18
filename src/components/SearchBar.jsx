@@ -43,7 +43,7 @@ export default function SearchBar() {
                     placeholder="Tìm kiếm bài học..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="flex-grow px-4 py-2 outline-none"
+                    className="flex-grow px-4 py-1 outline-none"
                 />
             </form>
 

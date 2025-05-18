@@ -1,25 +1,40 @@
-// import fs from "fs/promises";
-// import path from "path";
+import apiClient from "../lib/axios";
 
-// const dataPath = path.resolve("./data/accounts.json");
+class AuthRepository {
+  async getAllUsers() {
+    try {
+      const response = await apiClient.get("/accounts");
+      return response.data;
+    } catch (error) {
+      console.error("Lỗi khi gọi API:", error);
+      return [];
+    }
+  }
 
-class UserRepository {
-    // async getAllUsers() {
-    //     const data = await fs.readFile(dataPath, "utf-8");
-    //     return JSON.parse(data);
-    // }
+  async findByEmail(email) {
+    const users = await this.getAllUsers();
+    return users.find((u) => u.email === email);
+  }
 
-    // async findByEmail(email) {
-    //     const users = await this.getAllUsers();
-    //     return users.find(u => u.email === email);
-    // }
+  async saveUser(user) {
+    try {
+      const response = await apiClient.post("/accounts", user);
+      return response.data;
+    } catch (error) {
+      console.error("Lỗi khi lưu user:", error);
+      return null;
+    }
+  }
 
-    // async saveUser(user) {
-    //     const users = await this.getAllUsers();
-    //     users.push(user);
-    //     await fs.writeFile(dataPath, JSON.stringify(users, null, 2), "utf-8");
-    //     return user;
-    // }
+  async login(email, password) {
+    try {
+      const response = await apiClient.post("/login", { email, password });
+      return response.data;
+    } catch (error) {
+      console.error("Lỗi khi đăng nhập:", error);
+      throw error;
+    }
+  }
 }
 
-export default UserRepository;
+export default AuthRepository;

@@ -1,12 +1,13 @@
-import lessons from "../data/lessons.json";
+import apiClient from "../lib/axios";
 
-export class LessonRepository {
-  async getAll() {
-    return lessons;
-  }
+export default class LessonRepository {
+    async getAllLessons() {
+        const response = await apiClient.get("/lessons");
+        return response.data;
+    }
 
-  async getById(id) {
-    const lesson = lessons.find((l) => l.id === id);
-    return lesson ?? null;
-  }
+    async getLessonBySlug(slug) {
+        const response = await apiClient.get(`/lessons/${slug}`);
+        return response.data;
+    }
 }

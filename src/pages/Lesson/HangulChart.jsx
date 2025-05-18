@@ -2,21 +2,31 @@ import { useState } from 'react';
 import { hangul } from '../../data/hangul';
 import { useTranslation } from 'react-i18next';
 import { speak } from '../../config/speechUtils';
+import { VideoLearnPlayer } from '../../components/VideoLearnPlayer';
 
 export default function HangulChart() {
     const { t } = useTranslation('lessons');
 
-    const [activeTab, setActiveTab] = useState('simpleVowels');
+    const [activeTab, setActiveTab] = useState('videoLearn');
 
     const tabs = [
+        { id: 'videoLearn', label: t('tabs.videoLearn') },
         { id: 'simpleVowels', label: t('tabs.simpleVowels') },
         { id: 'complexVowels', label: t('tabs.complexVowels') },
         { id: 'basicConsonants', label: t('tabs.basicConsonants') },
         { id: 'doubleConsonants', label: t('tabs.doubleConsonants') },
     ];
 
+    const myVideos = [
+        "https://drive.google.com/file/d/1Agp2Jeblfx96kP9Wi_uFQJT566nLPJav/preview",
+        "https://drive.google.com/file/d/1ZZiWhUAjzUfsQw-Od0RWFmIugIk2Mszr/preview",
+        "https://drive.google.com/file/d/1X6xS-TVrhqNo0M2szN4wpDo4eaRYZpjQ/preview",
+    ];
+
     const renderContent = () => {
         switch (activeTab) {
+            case 'videoLearn':
+                return <VideoLearnPlayer videoUrls={myVideos} />;
             case 'simpleVowels':
                 return renderGrid(hangul.vowels.simple, 'bg-green-100');
             case 'complexVowels':
@@ -54,10 +64,11 @@ export default function HangulChart() {
                     <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
-                        className={`px-4 py-2 rounded border ${activeTab === tab.id
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-white text-blue-600 border-blue-600'
-                            }`}
+                        className={`flex-1 min-w-[120px] text-center px-4 py-2 rounded border
+                        ${activeTab === tab.id
+                                ? 'bg-blue-600 text-white border-blue-600'
+                                : 'bg-white text-blue-600 border-blue-600'}
+      `}
                     >
                         {tab.label}
                     </button>

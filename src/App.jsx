@@ -14,17 +14,24 @@ import LoginPage from "./pages/Auth/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import FallingEffect from "./components/FallingEffect";
 import LessonDetail from "./pages/Lesson/LessonDetail";
+import ScrollToTopButton from "./components/ScrollToTopButton";
+import NaverDictSearch from "./pages/NaverDictSearch";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App() {
     return (
         <>
-            <FallingEffect effect="cherryBlossoms" />
+            <FallingEffect effect="snowflakes" />
+            <ToastContainer />
+            <ScrollToTopButton />
             <LoadingScreen />
             <Header />
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/lessons" element={<LessonPage />} />
-                <Route path="/lessons/:lessonSlug" element={<LessonDetail />} />
+                <Route path="/naver-dict-search" element={<NaverDictSearch />} />
+                <Route path="/courses" element={<LessonPage />} />
+                <Route path="/courses/:lessonSlug" element={<LessonDetail />} />
                 {/* <Route path="/lessons/:lessonSlug/:subLessonSlug" element={<SubLessonDetail />} /> */}
 
                 <Route path="/about" element={<AboutPage />} />

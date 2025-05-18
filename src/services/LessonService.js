@@ -1,15 +1,13 @@
-import { LessonRepository } from "../repositories/LessonRepository.js";
-
-export class LessonService {
-  constructor() {
-    this.lessonRepo = new LessonRepository();
+export default class LessonService {
+  constructor(lessonRepository) {
+    this.lessonRepository = lessonRepository;
   }
 
-  async getLessons() {
-    return this.lessonRepo.getAll();
+  async listLessons() {
+    return await this.lessonRepository.getAllLessons();
   }
 
-  async getLessonById(id) {
-    return this.lessonRepo.getById(id);
+  async getLessonDetail(slug) {
+    return await this.lessonRepository.getLessonBySlug(slug);
   }
 }

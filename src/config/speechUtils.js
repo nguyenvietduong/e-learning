@@ -1,8 +1,9 @@
-import i18n from './i18n';
+import { toast } from 'react-toastify';
 
 export function speak(text) {
     if (!('speechSynthesis' in window)) {
-        alert(i18n.t('error.speech.notSupported'));
+        toast.error("Trình duyệt của bạn không hỗ trợ chức năng chuyển văn bản thành giọng nói.");
+        
         return;
     }
 
@@ -11,6 +12,6 @@ export function speak(text) {
         utterance.lang = 'ko-KR';
         speechSynthesis.speak(utterance);
     } catch (err) {
-        alert(i18n.t('error.speech.playError'));
+        toast.error("Không thể phát âm thanh. Vui lòng thử lại.");
     }
 }

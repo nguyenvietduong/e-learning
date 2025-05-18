@@ -52,7 +52,7 @@ export default function KoreanHistory() {
                 {tabs.map(({ key, label }) => (
                     <button
                         key={key}
-                        className={`px-4 py-2 rounded-full font-medium ${activeTab === key
+                        className={`px-4 py-2 font-medium ${activeTab === key
                             ? "bg-blue-600 text-white shadow-lg"
                             : "bg-gray-200 text-gray-700 hover:bg-blue-100"
                             } transition`}

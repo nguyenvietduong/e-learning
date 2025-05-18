@@ -8,8 +8,8 @@ export default function ContactPage() {
     const { email, phone, address, hours, social } = contactConfig;
 
     const breadcrumbItems = [
-        { label: t("nav.home"), path: "/" },
-        { label: t("nav.contact"), path: "/contact" }
+        { label: "Trang chủ", path: "/" },
+        { label: "Liên hệ", path: "/contact" }
     ];
 
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -22,7 +22,7 @@ export default function ContactPage() {
     const handleSubmit = e => {
         e.preventDefault();
         // Logic gửi form ở đây
-        setSubmitStatus(t('form.thankYou'));
+        setSubmitStatus("Cảm ơn bạn đã gửi liên hệ. Chúng tôi sẽ phản hồi sớm.");
         setFormData({ name: '', email: '', message: '' });
     };
 
@@ -30,12 +30,12 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 py-10">
             <Breadcrumb items={breadcrumbItems} />
 
-            <h2 className="text-4xl font-extrabold text-blue-700 mb-6 text-center">
-                {t("title", { ns: "contact" })}
+            <h2 className="text-3xl font-extrabold text-blue-700 mb-6 text-center">
+                📩 Liên hệ với KoLearn
             </h2>
 
-            <p className="text-gray-700 text-lg mb-12 text-center max-w-2xl mx-auto">
-                {t("intro", { ns: "contact" })}
+            <p className="text-gray-700 mb-12 text-center max-w-2xl mx-auto">
+                Nếu bạn có bất kỳ câu hỏi hoặc phản hồi nào, đừng ngần ngại liên hệ với chúng tôi qua các kênh dưới đây. Chúng tôi sẽ phản hồi bạn trong vòng 24 giờ làm việc.
             </p>
 
             {/* Form + Image ngang hàng */}
@@ -48,14 +48,14 @@ export default function ContactPage() {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                
+
                 {/* Form */}
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
                     <form onSubmit={handleSubmit} className="space-y-5">
-                        <h3 className="text-2xl font-semibold text-blue-600 mb-6">{t('form.title', { ns: "contact" })}</h3>
+                        <h3 className="text-xl font-semibold text-blue-600 mb-6">Gửi tin nhắn cho chúng tôi</h3>
 
                         <div>
-                            <label htmlFor="name" className="block text-gray-700 font-medium mb-1">{t('form.name', { ns: "contact" })}</label>
+                            <label htmlFor="name" className="block text-gray-700 text-[15px] font-medium mb-1">Tên của bạn</label>
                             <input
                                 type="text"
                                 id="name"
@@ -68,7 +68,7 @@ export default function ContactPage() {
                         </div>
 
                         <div>
-                            <label htmlFor="email" className="block text-gray-700 font-medium mb-1">{t('form.email', { ns: "contact" })}</label>
+                            <label htmlFor="email" className="block text-gray-700 text-[15px] font-medium mb-1">Email của bạn</label>
                             <input
                                 type="email"
                                 id="email"
@@ -81,7 +81,7 @@ export default function ContactPage() {
                         </div>
 
                         <div>
-                            <label htmlFor="message" className="block text-gray-700 font-medium mb-1">{t('form.message', { ns: "contact" })}</label>
+                            <label htmlFor="message" className="block text-gray-700 text-[15px] font-medium mb-1">Nội dung</label>
                             <textarea
                                 id="message"
                                 name="message"
@@ -95,9 +95,9 @@ export default function ContactPage() {
 
                         <button
                             type="submit"
-                            className="w-full bg-blue-600 text-white font-semibold px-4 py-3 rounded-md hover:bg-blue-700 transition duration-300"
+                            className="w-full bg-blue-600 text-white text-sm font-semibold px-4 py-3 rounded-md hover:bg-blue-700 transition duration-300"
                         >
-                            {t('form.submit', { ns: "contact" })}
+                            Gửi
                         </button>
 
                         {submitStatus && (
@@ -109,30 +109,28 @@ export default function ContactPage() {
 
             {/* Thông tin liên hệ và mạng xã hội */}
             <div className="bg-white p-8 rounded-xl shadow-md mt-14">
-                <h3 className="text-3xl font-semibold text-blue-600 mb-8 text-center">{t("info.title", { ns: "contact" })}</h3>
+                <h3 className="text-2xl font-semibold text-blue-600 mb-8 text-center">{t("info.title", { ns: "contact" })}</h3>
                 <div className="grid md:grid-cols-2 gap-10 text-gray-700 text-lg">
                     {/* Contact Info */}
-                    <ul className="space-y-6">
+                    <ul className="space-y-6 text-[15px]">
                         <li>
-                            <span className="font-semibold">📧 {t("info.email", { ns: "contact" })}:</span>{" "}
+                            <span className="font-semibold">📧 Email:</span>{" "}
                             <a href={`mailto:${email}`} className="text-blue-600 hover:underline">{email}</a>
                         </li>
                         <li>
-                            <span className="font-semibold">📞 {t("info.phone", { ns: "contact" })}:</span> {phone}
+                            <span className="font-semibold">📞 Số điện thoại:</span> {phone}
                         </li>
                         <li>
-                            <span className="font-semibold">📍 {t("info.address", { ns: "contact" })}:</span> {address}
+                            <span className="font-semibold">📍 Địa chỉ:</span> {address}
                         </li>
                         <li>
-                            <span className="font-semibold">⏰ {t("info.hours", { ns: "contact" })}:</span> {hours}
+                            <span className="font-semibold">⏰ Giờ làm việc:</span> {hours}
                         </li>
                     </ul>
 
                     {/* Social */}
-                    <div>
-                        <h4 className="text-2xl font-semibold text-blue-600 mb-4">{t("social.title", { ns: "contact" })}</h4>
-                        <p className="mb-6">{t("social.desc", { ns: "contact" })}</p>
-                        <ul className="space-y-4 text-lg">
+                    <div className="text-[15px]">
+                        <ul className="space-y-4">
                             <li>
                                 <a href={social.facebook} target="_blank" rel="noopener noreferrer"
                                     className="text-blue-600 hover:underline flex items-center gap-3">

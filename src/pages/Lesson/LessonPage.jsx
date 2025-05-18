@@ -9,8 +9,8 @@ export default function LessonPage() {
     const { t } = useTranslation();
 
     const breadcrumbItems = [
-        { label: t("nav.home"), to: '/' },
-        { label: t("nav.lesson"), to: '/lessons' },
+        { label: "Trang chủ", to: '/' },
+        { label: "Bài học", to: '/lessons' },
     ];
 
     return (
